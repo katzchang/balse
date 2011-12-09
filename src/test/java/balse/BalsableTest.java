@@ -18,10 +18,12 @@ public class BalsableTest {
 	}
 	
 	@Test
-	public void characterizeProcess() throws Exception {
-		ProcessBuilder pb = new ProcessBuilder("java", "-version");
+	public void testBalsableProcess() throws Exception {
+		ProcessBuilder pb = new ProcessBuilder("java",
+				"-classpath", "./target/test-classes;./target/classes",
+				"balse.BalsableRunner");
 		Process p = pb.start();
-		assertThat(p.waitFor(), is(0));
+		assertThat(p.waitFor(), is(1));
 	}
 
 }
