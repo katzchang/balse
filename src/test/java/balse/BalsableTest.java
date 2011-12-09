@@ -38,6 +38,6 @@ public class BalsableTest {
 		
 		assertThat(lines.size(), is(2));
 		assertThat(lines.get(0), is("時間だ！！答えを聞こう！！"));
-		assertThat(lines.get(1), is("バルス？"));
+		assertThat(lines.get(1), is("バルス！"));
 	}
 }
